@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance | EV World</title>
+    <meta name="description" content="Learn about EV World's GDPR compliance and your data protection rights">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gdpr-hero {
+            background: linear-gradient(135deg, #1a5276 0%, #3498db 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .gdpr-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('gdpr-bg.jpg') center/cover;
+            opacity: 0.1;
+        }
+        .gdpr-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        .gdpr-section {
+            margin-bottom: 60px;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gdpr-section:hover {
+            transform: translateY(-5px);
+        }
+        .gdpr-section h2 {
+            color: #1a5276;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .gdpr-section p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .gdpr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .gdpr-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .gdpr-card:hover {
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .gdpr-card h3 {
+            color: #1a5276;
+            margin-bottom: 15px;
+        }
+        .gdpr-card p {
+            color: #666;
+        }
+        .gdpr-icon {
+            font-size: 2.5em;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        .gdpr-list {
+            list-style: none;
+            padding: 0;
+        }
+        .gdpr-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .gdpr-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+        .gdpr-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        .timeline-item {
+            padding: 20px;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .timeline-date {
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">EV<span>World</span></a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="models.html" class="nav-link">Models</a></li>
+                    <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gdpr-hero" data-aos="fade-up">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeIn">GDPR Compliance</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">Your Data Protection Rights</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="gdpr-content">
+        <section class="gdpr-section" data-aos="fade-up">
+            <h2>Introduction</h2>
+            <p>At EV World, we are committed to protecting your personal data and ensuring that your privacy rights are respected in accordance with the General Data Protection Regulation (GDPR). This page explains your rights under GDPR and how we handle your personal data.</p>
+        </section>
+
+        <section class="gdpr-section" data-aos="fade-up">
+            <h2>Your Rights Under GDPR</h2>
+            <div class="gdpr-grid">
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Right to Access</h3>
+                    <p>You have the right to request access to your personal data and receive a copy of the data we hold about you.</p>
+                </div>
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Right to Rectification</h3>
+                    <p>You can request correction of inaccurate personal data or completion of incomplete data.</p>
+                </div>
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <h3>Right to Erasure</h3>
+                    <p>You can request deletion of your personal data under certain circumstances.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gdpr-section" data-aos="fade-up">
+            <h2>Data Processing Principles</h2>
+            <ul class="gdpr-list">
+                <li>Lawfulness, fairness, and transparency</li>
+                <li>Purpose limitation</li>
+                <li>Data minimization</li>
+                <li>Accuracy</li>
+                <li>Storage limitation</li>
+                <li>Integrity and confidentiality</li>
+                <li>Accountability</li>
+            </ul>
+        </section>
+
+        <section class="gdpr-section" data-aos="fade-up">
+            <h2>Our Data Protection Measures</h2>
+            <div class="gdpr-grid">
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Security</h3>
+                    <p>We implement appropriate technical and organizational measures to ensure data security.</p>
+                </div>
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Privacy by Design</h3>
+                    <p>We integrate data protection into our systems and processes from the start.</p>
+                </div>
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Consent Management</h3>
+                    <p>We ensure clear and informed consent for data processing activities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gdpr-section" data-aos="fade-up">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about our GDPR compliance or wish to exercise your rights, please contact our Data Protection Officer:</p>
+            <div class="gdpr-grid">
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>kiransapkota978@gmail.com</p>
+                </div>
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>07771746515</p>
+                </div>
+                <div class="gdpr-card">
+                    <div class="gdpr-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>DA 16 2ET</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo">EV<span>World</span></div>
+                <p>Driving the future of sustainable mobility through education and innovation.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="gdpr.html">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to our Newsletter</h3>
+                <p>Get the latest EV news, updates, and offers delivered to your inbox.</p>
+                <form class="newsletter-form" id="footer-newsletter-form">
+                    <input type="email" id="footer-newsletter-email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> EV World. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html> 

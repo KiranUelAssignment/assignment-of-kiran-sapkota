@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press | EV World</title>
+    <meta name="description" content="Latest news and press releases from EV World">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .press-hero {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .press-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('press-bg.jpg') center/cover;
+            opacity: 0.1;
+        }
+        .press-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        .press-section {
+            margin-bottom: 60px;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .press-section:hover {
+            transform: translateY(-5px);
+        }
+        .press-section h2 {
+            color: #8e44ad;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .press-section p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .press-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .press-card:hover {
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .press-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .press-card h3 {
+            color: #8e44ad;
+            margin-bottom: 15px;
+        }
+        .press-card p {
+            color: #666;
+        }
+        .press-date {
+            color: #9b59b6;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .press-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .category-btn {
+            padding: 10px 20px;
+            border: 2px solid #8e44ad;
+            border-radius: 25px;
+            color: #8e44ad;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .category-btn:hover, .category-btn.active {
+            background: #8e44ad;
+            color: white;
+        }
+        .press-contact {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .press-contact h3 {
+            color: #8e44ad;
+            margin-bottom: 20px;
+        }
+        .press-contact p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .press-download {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #8e44ad;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .press-download:hover {
+            background: #9b59b6;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modern Header/Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">EV<span>World</span></a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" data-i18n="nav.home">
+                            <span class="link-text">Home</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link" data-i18n="nav.about">
+                            <span class="link-text">About</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="models.html" class="nav-link" data-i18n="nav.models">
+                            <span class="link-text">Models</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link" data-i18n="nav.news">
+                            <span class="link-text">News</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resources.html" class="nav-link" data-i18n="nav.resources">
+                            <span class="link-text">Resources</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link" data-i18n="nav.contact">
+                            <span class="link-text">Contact</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <button class="search-toggle" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search EVs, news..." data-i18n-placeholder="search.placeholder">
+                            <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <button class="account-btn" id="account-btn" aria-label="Account">
+                        <i class="fas fa-user"></i>
+                        <span data-i18n="nav.signin">Sign In</span>
+                    </button>
+                </div>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="press-hero" data-aos="fade-up">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeIn">Press Center</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">Latest News and Media Resources</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="press-content">
+        <section class="press-section" data-aos="fade-up">
+            <h2>Latest Press Releases</h2>
+            <div class="press-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="company">Company News</button>
+                <button class="category-btn" data-category="product">Product Updates</button>
+                <button class="category-btn" data-category="partnership">Partnerships</button>
+                <button class="category-btn" data-category="event">Events</button>
+            </div>
+
+            <div class="press-grid">
+                <div class="press-card" data-category="company">
+                    <img src="truck.webp" alt="EV World Expansion">
+                    <div class="press-date">January 15, 2025</div>
+                    <h3>EV World Expands Charging Network</h3>
+                    <p>EV World announces the expansion of its charging network to 25 new cities across North America.</p>
+                </div>
+                <div class="press-card" data-category="partnership">
+                    <img src="Teslafront.jpg" alt="New Partnership">
+                    <div class="press-date">January 10, 2025</div>
+                    <h3>Strategic Partnership with Tesla</h3>
+                    <p>EV World and Tesla announce a new partnership to enhance charging infrastructure and user experience.</p>
+                </div>
+                <div class="press-card" data-category="company">
+                    <img src="money.jpg" alt="Sustainability Award">
+                    <div class="press-date">January 5, 2025</div>
+                    <h3>EV World Wins Sustainability Award</h3>
+                    <p>EV World recognized for its commitment to sustainable transportation and environmental initiatives.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="press-section" data-aos="fade-up">
+            <h2>Media Resources</h2>
+            <div class="press-grid">
+                <div class="press-card">
+                    <div class="press-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Press Kit</h3>
+                    <p>Download our comprehensive press kit including company information, logos, and high-resolution images.</p>
+                    <a href="#" class="press-download">Download Press Kit</a>
+                </div>
+                <div class="press-card">
+                    <div class="press-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Media Assets</h3>
+                    <p>Access our collection of videos, product demonstrations, and company presentations.</p>
+                    <a href="#" class="press-download">Download Media Assets</a>
+                </div>
+                <div class="press-card">
+                    <div class="press-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Company Profile</h3>
+                    <p>Get detailed information about EV World's history, mission, and achievements.</p>
+                    <a href="#" class="press-download">Download Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="press-section" data-aos="fade-up">
+            <h2>Press Contact</h2>
+            <div class="press-contact">
+                <h3>Media Inquiries</h3>
+                <p>For press inquiries, please contact our media relations team:</p>
+                <div class="press-grid">
+                    <div class="press-card">
+                        <div class="press-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>kiransapkota978@gmail.com</p>
+                    </div>
+                    <div class="press-card">
+                        <div class="press-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>07771746515</p>
+                    </div>
+                    <div class="press-card">
+                        <div class="press-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Address</h3>
+                        <p>DA 16 2ET</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo">EV<span>World</span></div>
+                <p data-i18n="footer.mission">Driving the future of sustainable mobility through education and innovation.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3 data-i18n="footer.company">Company</h3>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">Careers</a></li>
+                        <li><a href="press.html" data-i18n="footer.press">Press</a></li>
+                        <li><a href="partners.html" data-i18n="footer.partners">Partners</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h3 data-i18n="footer.legal">Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html" data-i18n="footer.cookie">Cookie Policy</a></li>
+                        <li><a href="gdpr.html" data-i18n="footer.gdpr">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 data-i18n="footer.newsletter">Subscribe to our Newsletter</h3>
+                <p data-i18n="footer.newsletter.text">Get the latest EV news, updates, and offers delivered to your inbox.</p>
+                <form class="newsletter-form" id="footer-newsletter-form">
+                    <input type="email" id="footer-newsletter-email" placeholder="Your email address" required data-i18n-placeholder="newsletter.placeholder">
+                    <button type="submit" data-i18n="footer.subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> EV World. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Press Release Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const pressCards = document.querySelectorAll('.press-card');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+
+                    // Filter press cards
+                    pressCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                            // Add animation
+                            card.style.animation = 'fadeIn 0.5s ease-in-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

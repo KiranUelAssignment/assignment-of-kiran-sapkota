@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | EV World</title>
+    <meta name="description" content="Learn how EV World protects your privacy and handles your personal data">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .privacy-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .privacy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('privacy-bg.jpg') center/cover;
+            opacity: 0.1;
+        }
+        .privacy-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        .privacy-section {
+            margin-bottom: 60px;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .privacy-section:hover {
+            transform: translateY(-5px);
+        }
+        .privacy-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .privacy-section p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .privacy-list {
+            list-style: none;
+            padding: 0;
+        }
+        .privacy-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .privacy-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .privacy-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .privacy-card:hover {
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .privacy-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .privacy-card p {
+            color: #666;
+        }
+        .privacy-icon {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .privacy-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        .timeline-item {
+            padding: 20px;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .timeline-date {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">EV<span>World</span></a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="models.html" class="nav-link">Models</a></li>
+                    <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="privacy-hero" data-aos="fade-up">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeIn">Privacy Policy</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">Last updated: January 2025</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="privacy-content">
+        <section class="privacy-section" data-aos="fade-up">
+            <h2>Introduction</h2>
+            <p>At EV World, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+            <p>We are committed to protecting your personal data and ensuring that your privacy rights are respected in accordance with applicable data protection laws, including the General Data Protection Regulation (GDPR).</p>
+        </section>
+
+        <section class="privacy-section" data-aos="fade-up">
+            <h2>Information We Collect</h2>
+            <div class="privacy-grid">
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Personal Information</h3>
+                    <p>Name, email address, phone number, and other contact details you provide when registering or contacting us.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Vehicle Information</h3>
+                    <p>Details about your electric vehicle, charging preferences, and usage patterns.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location Data</h3>
+                    <p>Information about your location when using our charging station finder feature.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="privacy-section" data-aos="fade-up">
+            <h2>How We Use Your Information</h2>
+            <ul class="privacy-list">
+                <li>To provide and maintain our services</li>
+                <li>To notify you about changes to our services</li>
+                <li>To provide customer support</li>
+                <li>To gather analysis or valuable information to improve our services</li>
+                <li>To monitor the usage of our services</li>
+                <li>To detect, prevent and address technical issues</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section" data-aos="fade-up">
+            <h2>Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk, including:</p>
+            <div class="privacy-grid">
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Encryption</h3>
+                    <p>All data is encrypted in transit and at rest using industry-standard protocols.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Access Control</h3>
+                    <p>Strict access controls and authentication mechanisms to protect your data.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Regular Audits</h3>
+                    <p>Regular security audits and updates to maintain the highest security standards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="privacy-section" data-aos="fade-up">
+            <h2>Your Rights</h2>
+            <p>Under GDPR, you have the following rights regarding your personal data:</p>
+            <ul class="privacy-list">
+                <li>The right to access your personal data</li>
+                <li>The right to rectification of inaccurate data</li>
+                <li>The right to erasure (right to be forgotten)</li>
+                <li>The right to restrict processing</li>
+                <li>The right to data portability</li>
+                <li>The right to object to processing</li>
+                <li>Rights in relation to automated decision making and profiling</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section" data-aos="fade-up">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <div class="privacy-grid">
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>privacy@evworld.com</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>123 EV Street, Green City, CA 90210</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo">EV<span>World</span></div>
+                <p>Driving the future of sustainable mobility through education and innovation.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="gdpr.html">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to our Newsletter</h3>
+                <p>Get the latest EV news, updates, and offers delivered to your inbox.</p>
+                <form class="newsletter-form" id="footer-newsletter-form">
+                    <input type="email" id="footer-newsletter-email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> EV World. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html> 

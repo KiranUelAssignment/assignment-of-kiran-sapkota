@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Electric Vehicles | EV World</title>
+    <meta name="description" content="Learn about electric vehicles and their benefits for a sustainable future">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="language.js" defer></script>
+</head>
+<body>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modern Header/Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">EV<span>World</span></a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" data-i18n="nav.home">
+                            <span class="link-text">Home</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active" data-i18n="nav.about">
+                            <span class="link-text">About</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="models.html" class="nav-link" data-i18n="nav.models">
+                            <span class="link-text">Models</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link" data-i18n="nav.news">
+                            <span class="link-text">News</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resources.html" class="nav-link" data-i18n="nav.resources">
+                            <span class="link-text">Resources</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link" data-i18n="nav.contact">
+                            <span class="link-text">Contact</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <button class="search-toggle" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search EVs, news..." data-i18n-placeholder="search.placeholder">
+                            <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="language-selector">
+                        <select id="languageSelect" aria-label="Select language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt">Português</option>
+                            <option value="ru">Русский</option>
+                            <option value="zh">中文</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko">한국어</option>
+                        </select>
+                    </div>
+                    <button class="account-btn" id="account-btn" aria-label="Account">
+                        <i class="fas fa-user"></i>
+                        <span data-i18n="nav.signin">Sign In</span>
+                    </button>
+                </div>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About EV Section -->
+        <section id="about" class="section about-section">
+            <div class="section-header">
+                <h2 data-i18n="about.title">About Electric Vehicles</h2>
+                <p data-i18n="about.subtitle">Electric Vehicles are not just transportation - they're a movement towards sustainable living</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-i18n="about.future.title">The Future is Electric</h3>
+                    <p data-i18n="about.future.text1">Electric vehicles (EVs) represent a revolutionary shift in personal transportation. By eliminating tailpipe emissions and reducing our dependence on fossil fuels, EVs offer a cleaner, more sustainable alternative to traditional gasoline-powered cars.</p>
+                    <p data-i18n="about.future.text2">The technology behind EVs has advanced dramatically in recent years, with modern electric cars offering ranges of 300+ miles on a single charge, fast charging capabilities, and performance that often surpasses their gasoline counterparts.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-value" data-count="1200">0</div>
+                            <div class="stat-label" data-i18n="about.stats.range">Miles Range</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" data-count="80">0</div>
+                            <div class="stat-label" data-i18n="about.stats.efficiency">% Energy Efficient</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" data-count="60">0</div>
+                            <div class="stat-label" data-i18n="about.stats.emissions">% Lower Emissions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-media">
+                    <div class="about-image">
+                        <img src="BMW.jpg" alt="BMW">
+                    </div>
+                    <div class="about-video">
+                        <iframe 
+                          loading="lazy" 
+                          src="https://www.youtube.com/embed/ItreON4lIW8?si=gh76H-ub_dd2yXqE" 
+                          title="YouTube video about electric vehicles" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                          allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section">
+            <div class="section-header">
+                <h2 data-i18n="faq.title">Frequently Asked Questions</h2>
+                <p data-i18n="faq.subtitle">Get answers to common questions about electric vehicles</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq.q1">How long does it take to charge an electric car?</button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a1">Charging time varies depending on the battery size and charger type. Level 1 charging (standard outlet) can take 8-20 hours, Level 2 (240V) typically takes 4-8 hours, and DC fast charging can provide 80% charge in 20-40 minutes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq.q2">What is the average range of an electric vehicle?</button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a2">Most modern EVs offer 200-300 miles on a full charge, with premium models reaching 350-400+ miles. Range varies based on driving conditions, speed, temperature, and use of climate control.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq.q3">Are electric vehicles really better for the environment?</button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a3">Yes, even when accounting for electricity generation, EVs produce significantly fewer emissions over their lifetime compared to gasoline vehicles. As the grid becomes cleaner with renewable energy, EVs become even more environmentally friendly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq.q4">How much does it cost to charge an electric car?</button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a4">The cost depends on local electricity rates and charging location. On average, home charging costs about $0.04-$0.08 per mile, while public charging varies from $0.10-$0.30 per mile for fast charging.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq.q5">How long do EV batteries last?</button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a5">Most EV batteries are designed to last 10-20 years or 100,000-200,000 miles. Battery degradation is typically gradual, with most retaining 70-80% capacity after 100,000 miles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2 data-i18n="newsletter.title">Stay Charged Up</h2>
+                    <p data-i18n="newsletter.subtitle">Subscribe to our newsletter for the latest EV news, updates, and special offers</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required data-i18n-placeholder="newsletter.placeholder">
+                    <button type="submit" data-i18n="newsletter.button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+        <!-- Sign In Modal -->
+        <div class="modal" id="signin-modal">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                <h2 data-i18n="modal.signin.title">Sign In</h2>
+                <form class="signin-form" id="signin-form">
+                    <div class="form-group">
+                        <input type="email" id="signin-email" placeholder="Email Address" required data-i18n-placeholder="modal.email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signin-password" placeholder="Password" required data-i18n-placeholder="modal.password">
+                    </div>
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" id="remember-me" data-i18n="modal.remember"> Remember me
+                        </label>
+                        <a href="#" class="forgot-password" data-i18n="modal.forgot">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="signin-btn" data-i18n="modal.signin.button">Sign In</button>
+                    <div class="signup-link">
+                        <span data-i18n="modal.noaccount">Don't have an account?</span> <a href="#" id="show-signup" data-i18n="modal.signup.link">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signup-modal">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                <h2 data-i18n="modal.signup.title">Create Account</h2>
+                <form class="signup-form" id="signup-form">
+                    <div class="form-group">
+                        <input type="text" id="signup-first-name" placeholder="First Name" required data-i18n-placeholder="contact.firstname">
+                        <input type="text" id="signup-last-name" placeholder="Last Name" required data-i18n-placeholder="contact.lastname">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signup-email" placeholder="Email Address" required data-i18n-placeholder="contact.email">
+                        <input type="tel" id="signup-phone" placeholder="Phone Number" data-i18n-placeholder="contact.phone">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signup-password" placeholder="Password" required data-i18n-placeholder="modal.password">
+                        <input type="password" id="signup-confirm" placeholder="Confirm Password" required data-i18n-placeholder="modal.confirm">
+                    </div>
+                    <div class="form-group">
+                        <select id="signup-location" required>
+                            <option value="" disabled selected data-i18n="modal.location">Location</option>
+                            <option value="us" data-i18n="modal.location.us">United States</option>
+                            <option value="ca" data-i18n="modal.location.ca">Canada</option>
+                            <option value="uk" data-i18n="modal.location.uk">United Kingdom</option>
+                            <option value="eu" data-i18n="modal.location.eu">Europe</option>
+                            <option value="other" data-i18n="modal.location.other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group radio-group">
+                        <label data-i18n="modal.gender">Gender:</label>
+                        <div class="radio-options">
+                            <label>
+                                <input type="radio" name="gender" value="male" data-i18n="modal.gender.male"> Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female" data-i18n="modal.gender.female"> Female
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="other" data-i18n="modal.gender.other"> Other
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="none" data-i18n="modal.gender.none"> Prefer not to say
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="terms-agree" required> <span data-i18n="modal.agree">I agree to the</span> <a href="#" data-i18n="modal.terms">Terms of Service</a> <span data-i18n="modal.and">and</span> <a href="#" data-i18n="modal.privacy">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="signup-btn" data-i18n="modal.signup.button">Sign Up</button>
+                    <div class="signin-link">
+                        <span data-i18n="modal.haveaccount">Already have an account?</span> <a href="#" id="show-signin" data-i18n="modal.signin.link">Sign in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo">EV<span>World</span></div>
+                <p data-i18n="footer.mission">Driving the future of sustainable mobility through education and innovation.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3 data-i18n="footer.company">Company</h3>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">Careers</a></li>
+                        <li><a href="press.html" data-i18n="footer.press">Press</a></li>
+                        <li><a href="partners.html" data-i18n="footer.partners">Partners</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h3 data-i18n="footer.legal">Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html" data-i18n="footer.cookie">Cookie Policy</a></li>
+                        <li><a href="gdpr.html" data-i18n="footer.gdpr">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 data-i18n="footer.newsletter">Subscribe to our Newsletter</h3>
+                <p data-i18n="footer.newsletter.text">Get the latest EV news, updates, and offers delivered to your inbox.</p>
+                <form class="newsletter-form" id="footer-newsletter-form">
+                    <input type="email" id="footer-newsletter-email" placeholder="Your email address" required data-i18n-placeholder="newsletter.placeholder">
+                    <button type="submit" data-i18n="footer.subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2023</span> EV World. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

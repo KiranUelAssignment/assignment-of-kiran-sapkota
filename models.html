@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Models | EV World</title>
+    <meta name="description" content="Explore the latest electric vehicle models available on the market">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="language.js" defer></script>
+</head>
+<body>
+   
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modern Header/Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">EV<span>World</span></a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" data-i18n="nav.home">
+                            <span class="link-text">Home</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link" data-i18n="nav.about">
+                            <span class="link-text">About</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="models.html" class="nav-link active" data-i18n="nav.models">
+                            <span class="link-text">Models</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link" data-i18n="nav.news">
+                            <span class="link-text">News</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resources.html" class="nav-link" data-i18n="nav.resources">
+                            <span class="link-text">Resources</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link" data-i18n="nav.contact">
+                            <span class="link-text">Contact</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <button class="search-toggle" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search EVs, news..." data-i18n-placeholder="search.placeholder">
+                            <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="language-selector">
+                        <select id="languageSelect" aria-label="Select language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt">Português</option>
+                            <option value="ru">Русский</option>
+                            <option value="zh">中文</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko">한국어</option>
+                        </select>
+                    </div>
+                    <button class="account-btn" id="account-btn" aria-label="Account">
+                        <i class="fas fa-user"></i>
+                        <span data-i18n="nav.signin">Sign In</span>
+                    </button>
+                </div>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- EV Models Section -->
+        <section id="models" class="section models-section">
+            <div class="section-header">
+                <h2 data-i18n="models.title">Popular EV Models</h2>
+                <p data-i18n="models.subtitle">Discover the most sought-after electric vehicles on the market today</p>
+            </div>
+            <div class="models-grid">
+                <div class="model-card">
+                    <div class="model-image">
+                        <img src="Tesla.avif" alt="Tesla Model 3">
+                        <div class="model-badge" data-i18n="models.badge.bestseller">Best Seller</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Tesla Model 3</h3>
+                        <div class="model-specs">
+                            <span><i class="fas fa-bolt"></i> <span data-i18n="models.specs.range">358 mi range</span></span>
+                            <span><i class="fas fa-tachometer-alt"></i> <span data-i18n="models.specs.acceleration">3.1s 0-60mph</span></span>
+                        </div>
+                        <p data-i18n="models.description.tesla">The Tesla Model 3 combines performance, safety, and efficiency with a minimalist interior design.</p>
+                        <div class="model-price" data-i18n="models.price.tesla">From $42,990</div>
+                        <a href="tesla-model3-details.html" class="model-btn" data-i18n="models.button">View Details</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-image">
+                        <img src="AUDI.jpg" alt="Audi e-tron">
+                        <div class="model-badge" data-i18n="models.badge.budget">Budget Friendly</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Audi e-tron</h3>
+                        <div class="model-specs">
+                            <span><i class="fas fa-bolt"></i> <span data-i18n="models.specs.range2">222 mi range</span></span>
+                            <span><i class="fas fa-tachometer-alt"></i> <span data-i18n="models.specs.acceleration2">5.5s 0-60mph</span></span>
+                        </div>
+                        <p data-i18n="models.description.etron">The Audi e-tron combines luxury and performance with cutting-edge electric technology and premium interiors.</p>
+                        <div class="model-price" data-i18n="models.price.etron">From $66,995</div>
+                        <a href="audi-etron.html" class="model-btn" data-i18n="models.button">View Details</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-image">
+                        <img src="BMW2.jpg" alt="BMW i4">
+                        <div class="model-badge" data-i18n="models.badge.luxury">Luxury</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>BMW i4</h3>
+                        <div class="model-specs">
+                            <span><i class="fas fa-bolt"></i> <span data-i18n="models.specs.range3">300 mi range</span></span>
+                            <span><i class="fas fa-tachometer-alt"></i> <span data-i18n="models.specs.acceleration3">3.7s 0-60mph</span></span>
+                        </div>
+                        <p data-i18n="models.description.bmw">The BMW i4 delivers the brand's signature driving dynamics in a fully electric package.</p>
+                        <div class="model-price" data-i18n="models.price.bmw">From $52,200</div>
+                        <a href="bmw-i4.html" class="model-btn" data-i18n="models.button">View Details</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-image">
+                        <img src="mercedes.jpg" alt="Mercedes Benz">
+                        <div class="model-badge" data-i18n="models.badge.popular">Popular</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Mercedes-Benz EQE</h3>
+                        <div class="model-specs">
+                            <span><i class="fas fa-bolt"></i> <span>305 mi range</span></span>
+                            <span><i class="fas fa-tachometer-alt"></i> <span>4.5s 0-60mph</span></span>
+                        </div>
+                        <p>The Mercedes-Benz EQE delivers premium electric luxury with cutting-edge technology and refined performance.</p>
+                        <div class="model-price">From $74,500</div>
+                        <a href="mercedes-eqe.html" class="model-btn">View Details</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-image">
+                        <img src="ford.jpg" alt="Ford Mustang Mach-E">
+                        <div class="model-badge" data-i18n="models.badge.new">New</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Ford Mustang Mach-E</h3>
+                        <div class="model-specs">
+                            <span><i class="fas fa-bolt"></i> <span>305 mi range</span></span>
+                            <span><i class="fas fa-tachometer-alt"></i> <span>3.5s 0-60mph</span></span>
+                        </div>
+                        <p>The Mustang Mach-E combines iconic Mustang styling with all-electric power and modern technology.</p>
+                        <div class="model-price">From $42,995</div>
+                        <a href="ford-mach-e.html" class="model-btn">View Details</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-image">
+                        <img src="Hyundai.jpg" alt="Hyundai Ioniq 5">
+                        <div class="model-badge" data-i18n="models.badge.editors">Editor's Choice</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>Hyundai Ioniq 5</h3>
+                        <div class="model-specs">
+                            <span><i class="fas fa-bolt"></i> <span>303 mi range</span></span>
+                            <span><i class="fas fa-tachometer-alt"></i> <span>5.2s 0-60mph</span></span>
+                        </div>
+                        <p>The Ioniq 5 stands out with its retro-futuristic design and ultra-fast charging capability.</p>
+                        <div class="model-price">From $41,450</div>
+                        <a href="hyundai-ioniq5.html" class="model-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="#models" class="view-all-btn" data-i18n="models.viewall">View All Models <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Charging Station Map -->
+        <section class="section map-section">
+            <div class="section-header">
+                <h2 data-i18n="map.title">Find Charging Stations Near You</h2>
+                <p data-i18n="map.subtitle">Locate public charging stations with real-time availability</p>
+            </div>
+            <div class="map-container">
+                <figure id="charging-map">
+                    <figcaption class="visually-hidden">Map of charging stations</figcaption>
+                    <!-- Map will be inserted here via JavaScript -->
+                </figure>
+                <div class="map-controls">
+                    <div class="map-search">
+                        <input type="text" id="map-search-input" placeholder="Search location..." data-i18n-placeholder="map.search">
+                        <button id="map-search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="map-filters">
+                        <select id="charger-type" aria-label="Filter by charger type">
+                            <option value="all" data-i18n="map.filter.all">All Charger Types</option>
+                            <option value="level2" data-i18n="map.filter.level2">Level 2</option>
+                            <option value="dcfast" data-i18n="map.filter.dcfast">DC Fast</option>
+                            <option value="tesla" data-i18n="map.filter.tesla">Tesla Supercharger</option>
+                        </select>
+                        <select id="connector-type" aria-label="Filter by connector type">
+                            <option value="all" data-i18n="map.filter.all">All Connectors</option>
+                            <option value="j1772">J1772</option>
+                            <option value="ccs">CCS</option>
+                            <option value="chademo">CHAdeMO</option>
+                            <option value="tesla">Tesla</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2 data-i18n="newsletter.title">Stay Charged Up</h2>
+                    <p data-i18n="newsletter.subtitle">Subscribe to our newsletter for the latest EV news, updates, and special offers</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required data-i18n-placeholder="newsletter.placeholder">
+                    <button type="submit" data-i18n="newsletter.button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sign In Modal -->
+        <div class="modal" id="signin-modal">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                <h2 data-i18n="modal.signin.title">Sign In</h2>
+                <form class="signin-form" id="signin-form">
+                    <div class="form-group">
+                        <input type="email" id="signin-email" placeholder="Email Address" required data-i18n-placeholder="modal.email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signin-password" placeholder="Password" required data-i18n-placeholder="modal.password">
+                    </div>
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" id="remember-me" data-i18n="modal.remember"> Remember me
+                        </label>
+                        <a href="#" class="forgot-password" data-i18n="modal.forgot">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="signin-btn" data-i18n="modal.signin.button">Sign In</button>
+                    <div class="signup-link">
+                        <span data-i18n="modal.noaccount">Don't have an account?</span> <a href="#" id="show-signup" data-i18n="modal.signup.link">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signup-modal">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                <h2 data-i18n="modal.signup.title">Create Account</h2>
+                <form class="signup-form" id="signup-form">
+                    <div class="form-group">
+                        <input type="text" id="signup-first-name" placeholder="First Name" required data-i18n-placeholder="contact.firstname">
+                        <input type="text" id="signup-last-name" placeholder="Last Name" required data-i18n-placeholder="contact.lastname">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signup-email" placeholder="Email Address" required data-i18n-placeholder="contact.email">
+                        <input type="tel" id="signup-phone" placeholder="Phone Number" data-i18n-placeholder="contact.phone">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signup-password" placeholder="Password" required data-i18n-placeholder="modal.password">
+                        <input type="password" id="signup-confirm" placeholder="Confirm Password" required data-i18n-placeholder="modal.confirm">
+                    </div>
+                    <div class="form-group">
+                        <select id="signup-location" required>
+                            <option value="" disabled selected data-i18n="modal.location">Location</option>
+                            <option value="us" data-i18n="modal.location.us">United States</option>
+                            <option value="ca" data-i18n="modal.location.ca">Canada</option>
+                            <option value="uk" data-i18n="modal.location.uk">United Kingdom</option>
+                            <option value="eu" data-i18n="modal.location.eu">Europe</option>
+                            <option value="other" data-i18n="modal.location.other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group radio-group">
+                        <label data-i18n="modal.gender">Gender:</label>
+                        <div class="radio-options">
+                            <label>
+                                <input type="radio" name="gender" value="male" data-i18n="modal.gender.male"> Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female" data-i18n="modal.gender.female"> Female
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="other" data-i18n="modal.gender.other"> Other
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="none" data-i18n="modal.gender.none"> Prefer not to say
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="terms-agree" required> <span data-i18n="modal.agree">I agree to the</span> <a href="#" data-i18n="modal.terms">Terms of Service</a> <span data-i18n="modal.and">and</span> <a href="#" data-i18n="modal.privacy">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="signup-btn" data-i18n="modal.signup.button">Sign Up</button>
+                    <div class="signin-link">
+                        <span data-i18n="modal.haveaccount">Already have an account?</span> <a href="#" id="show-signin" data-i18n="modal.signin.link">Sign in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo">EV<span>World</span></div>
+                <p data-i18n="footer.mission">Driving the future of sustainable mobility through education and innovation.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3 data-i18n="footer.company">Company</h3>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">Careers</a></li>
+                        <li><a href="press.html" data-i18n="footer.press">Press</a></li>
+                        <li><a href="partners.html" data-i18n="footer.partners">Partners</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h3 data-i18n="footer.legal">Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html" data-i18n="footer.cookie">Cookie Policy</a></li>
+                        <li><a href="gdpr.html" data-i18n="footer.gdpr">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 data-i18n="footer.newsletter">Subscribe to our Newsletter</h3>
+                <p data-i18n="footer.newsletter.text">Get the latest EV news, updates, and offers delivered to your inbox.</p>
+                <form class="newsletter-form" id="footer-newsletter-form">
+                    <input type="email" id="footer-newsletter-email" placeholder="Your email address" required data-i18n-placeholder="newsletter.placeholder">
+                    <button type="submit" data-i18n="footer.subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2023</span> EV World. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

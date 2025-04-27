@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV News | EV World</title>
+    <meta name="description" content="Latest news and updates about electric vehicles and sustainable mobility">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="language.js" defer></script>
+</head>
+<body>
+   
+    
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modern Header/Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">EV<span>World</span></a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" data-i18n="nav.home">
+                            <span class="link-text">Home</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link" data-i18n="nav.about">
+                            <span class="link-text">About</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="models.html" class="nav-link" data-i18n="nav.models">
+                            <span class="link-text">Models</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link active" data-i18n="nav.news">
+                            <span class="link-text">News</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resources.html" class="nav-link" data-i18n="nav.resources">
+                            <span class="link-text">Resources</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link" data-i18n="nav.contact">
+                            <span class="link-text">Contact</span>
+                            <span class="link-underline"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <button class="search-toggle" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search EVs, news..." data-i18n-placeholder="search.placeholder">
+                            <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="language-selector">
+                        <select id="languageSelect" aria-label="Select language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt">Português</option>
+                            <option value="ru">Русский</option>
+                            <option value="zh">中文</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko">한국어</option>
+                        </select>
+                    </div>
+                    <button class="account-btn" id="account-btn" aria-label="Account">
+                        <i class="fas fa-user"></i>
+                        <span data-i18n="nav.signin">Sign In</span>
+                    </button>
+                </div>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- News Section -->
+        <section id="news" class="section news-section">
+            <div class="section-header">
+                <h2 data-i18n="news.title">Latest EV News</h2>
+                <p data-i18n="news.subtitle">Stay updated with the latest trends, innovations, and news in the EV world</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="battery2.jpg" alt="EV Battery Recycling">
+                        <div class="news-date" data-i18n="news.date1">Jun 15, 2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 data-i18n="news.title1">New Battery Breakthrough Doubles EV Range</h3>
+                        <p data-i18n="news.text1">Researchers have developed a new solid-state battery technology that could potentially double the range of current electric vehicles while reducing charging times...</p>
+                        <a href="#" class="read-more" data-i18n="news.readmore">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="Tax.jpg" alt="EV Tax Credits">
+                        <div class="news-date" data-i18n="news.date2">Jun 8, 2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 data-i18n="news.title2">Government Announces New EV Tax Credits</h3>
+                        <p data-i18n="news.text2">The federal government has expanded its electric vehicle tax credit program, making more models eligible and increasing the maximum credit amount for qualifying...</p>
+                        <a href="#" class="read-more" data-i18n="news.readmore">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="money.jpg" alt="EV Sales Chart">
+                        <div class="news-date" data-i18n="news.date3">May 30, 2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 data-i18n="news.title3">EV Sales Surpass Diesel in Europe for First Time</h3>
+                        <p data-i18n="news.text3">Electric vehicle sales have overtaken diesel vehicles in Europe for the first time, marking a significant milestone in the transition to sustainable...</p>
+                        <a href="#" class="read-more" data-i18n="news.readmore">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="charging.jpg" alt="Charging Infrastructure">
+                        <div class="news-date">Jun 22, 2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Major Expansion of EV Charging Network Announced</h3>
+                        <p>A coalition of automakers has pledged to install 30,000 new fast chargers across North America by 2025, significantly expanding charging infrastructure...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="truck.webp" alt="Electric Truck">
+                        <div class="news-date">Jun 18, 2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Electric Pickup Trucks: The Next Frontier in EV Adoption</h3>
+                        <p>With several electric pickup trucks now hitting the market, analysts predict this segment could be key to accelerating mainstream EV adoption in the US...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="battery1.webp" alt="EV Battery Recycling">
+                        <div class="news-date">Jun 5, 2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>New Battery Recycling Process Achieves 95% Recovery Rate</h3>
+                        <p>A breakthrough in battery recycling technology promises to make EV batteries more sustainable by recovering 95% of key materials, addressing concerns about battery waste...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2 data-i18n="newsletter.title">Stay Charged Up</h2>
+                    <p data-i18n="newsletter.subtitle">Subscribe to our newsletter for the latest EV news, updates, and special offers</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Your email address" required data-i18n-placeholder="newsletter.placeholder">
+                    <button type="submit" data-i18n="newsletter.button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sign In Modal -->
+        <div class="modal" id="signin-modal">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                <h2 data-i18n="modal.signin.title">Sign In</h2>
+                <form class="signin-form" id="signin-form">
+                    <div class="form-group">
+                        <input type="email" id="signin-email" placeholder="Email Address" required data-i18n-placeholder="modal.email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signin-password" placeholder="Password" required data-i18n-placeholder="modal.password">
+                    </div>
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" id="remember-me" data-i18n="modal.remember"> Remember me
+                        </label>
+                        <a href="#" class="forgot-password" data-i18n="modal.forgot">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="signin-btn" data-i18n="modal.signin.button">Sign In</button>
+                    <div class="signup-link">
+                        <span data-i18n="modal.noaccount">Don't have an account?</span> <a href="#" id="show-signup" data-i18n="modal.signup.link">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signup-modal">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                <h2 data-i18n="modal.signup.title">Create Account</h2>
+                <form class="signup-form" id="signup-form">
+                    <div class="form-group">
+                        <input type="text" id="signup-first-name" placeholder="First Name" required data-i18n-placeholder="contact.firstname">
+                        <input type="text" id="signup-last-name" placeholder="Last Name" required data-i18n-placeholder="contact.lastname">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signup-email" placeholder="Email Address" required data-i18n-placeholder="contact.email">
+                        <input type="tel" id="signup-phone" placeholder="Phone Number" data-i18n-placeholder="contact.phone">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signup-password" placeholder="Password" required data-i18n-placeholder="modal.password">
+                        <input type="password" id="signup-confirm" placeholder="Confirm Password" required data-i18n-placeholder="modal.confirm">
+                    </div>
+                    <div class="form-group">
+                        <select id="signup-location" required>
+                            <option value="" disabled selected data-i18n="modal.location">Location</option>
+                            <option value="us" data-i18n="modal.location.us">United States</option>
+                            <option value="ca" data-i18n="modal.location.ca">Canada</option>
+                            <option value="uk" data-i18n="modal.location.uk">United Kingdom</option>
+                            <option value="eu" data-i18n="modal.location.eu">Europe</option>
+                            <option value="other" data-i18n="modal.location.other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group radio-group">
+                        <label data-i18n="modal.gender">Gender:</label>
+                        <div class="radio-options">
+                            <label>
+                                <input type="radio" name="gender" value="male" data-i18n="modal.gender.male"> Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female" data-i18n="modal.gender.female"> Female
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="other" data-i18n="modal.gender.other"> Other
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="none" data-i18n="modal.gender.none"> Prefer not to say
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="terms-agree" required> <span data-i18n="modal.agree">I agree to the</span> <a href="#" data-i18n="modal.terms">Terms of Service</a> <span data-i18n="modal.and">and</span> <a href="#" data-i18n="modal.privacy">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="signup-btn" data-i18n="modal.signup.button">Sign Up</button>
+                    <div class="signin-link">
+                        <span data-i18n="modal.haveaccount">Already have an account?</span> <a href="#" id="show-signin" data-i18n="modal.signin.link">Sign in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo">EV<span>World</span></div>
+                <p data-i18n="footer.mission">Driving the future of sustainable mobility through education and innovation.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3 data-i18n="footer.company">Company</h3>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">Careers</a></li>
+                        <li><a href="press.html" data-i18n="footer.press">Press</a></li>
+                        <li><a href="partners.html" data-i18n="footer.partners">Partners</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h3 data-i18n="footer.legal">Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html" data-i18n="footer.cookie">Cookie Policy</a></li>
+                        <li><a href="gdpr.html" data-i18n="footer.gdpr">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3 data-i18n="footer.newsletter">Subscribe to our Newsletter</h3>
+                <p data-i18n="footer.newsletter.text">Get the latest EV news, updates, and offers delivered to your inbox.</p>
+                <form class="newsletter-form" id="footer-newsletter-form">
+                    <input type="email" id="footer-newsletter-email" placeholder="Your email address" required data-i18n-placeholder="newsletter.placeholder">
+                    <button type="submit" data-i18n="footer.subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2023</span> EV World. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
